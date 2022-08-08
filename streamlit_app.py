@@ -1,7 +1,7 @@
 from datasets import load_dataset
 import streamlit as st
 
-dataset = load_dataset("merve/poetry", streaming=True)
+dataset = load_dataset("poetry.csv", streaming=True)
 df = pd.DataFrame.from_dict(dataset["train"])
 
 st.write("Most appearing words including stopwords")
